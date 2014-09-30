@@ -1,0 +1,41 @@
+<ion-view title="Doughnut Chart">
+  <ion-nav-buttons side="left">
+    <img src="img/rsz_logo.png" id="logo"></button>
+  </ion-nav-buttons>
+  <ion-nav-buttons side="right" ng-controller="popover">
+    <button ng-click="openPopover($event)" class="button button-icon icon ion-android-more" ontouchend="window.plugins.deviceFeedback.acoustic()"></button>
+  </ion-nav-buttons>
+  <div class="bar bar-subheader bar-stable" ng-controller="popover">
+    <h5 ng-if="chartProvider == 'morris'" class="title">Example 1</h5>
+    <h5 ng-if="chartProvider == 'chartjs'" class="title">Example 2</h5>
+    <h5 ng-if="chartProvider == 'canvasjs'" class="title">Example 3</h5>
+  </div>
+  <ion-content class="padding">
+    <br /><br />
+
+    <morrisdonut ng-if="chartProvider == 'morris'" id="morris">
+        <div id="donut-example" style="height: 300px; width: 100%;"></div>
+    </morrisdonut>
+    <!-- <div id="hichart">
+    <hichartdonut ng-if="chartProvider == 'morris'" id="gege">
+      <div id="hichart-container" style="position: relative; overflow: hidden; width: 200px; height: 400px;display:block;margin:0 auto;"></div>
+    </hichartdonut>
+    </div> -->
+
+    <!-- <zingdonut ng-if="chartProvider == 'morris'">
+      <div id="myChartDiv"></div>
+    </zingdonut> -->
+
+    <chartjsdonut ng-if="chartProvider == 'chartjs'" id="chartjs">
+      <div id="canvas-holder">
+			     <canvas id="chart-area" />
+		  </div>
+    </chartjsdonut>
+
+    <canvasjsdonut ng-if="chartProvider == 'canvasjs'" id="canvasjsdonut">
+      <div id="chartContainer" style="height: 300px; width: 100%;">
+    </div>
+  </canvasjsdonut>
+
+  </ion-content>
+</ion-view>

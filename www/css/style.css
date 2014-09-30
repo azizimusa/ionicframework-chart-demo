@@ -1,0 +1,31 @@
+.popover {
+  top: 78px !important;
+  background-color: #2E2D2E !important;
+  height: 162px !important;
+}
+ion-item.popover-item.item.item-complex > a.item-content.ng-binding {
+  background-color: #2E2D2E !important;
+  color: #c0c1c4 !important;
+  border-bottom: 1px solid #c0c1c4 !important;
+}
+#canvas-holder{
+  display: block;
+  margin: 0 auto;
+	width:100%;
+}
+button.button.button-icon.icon.ion-android-more:before {
+  font-size: 22px;
+}
+.bar.bar-calm .title {
+  text-align: left;
+  left: 65px;
+  /*float: left !important;*/
+}
+img#logo {
+  margin-top: 7px;
+  height: 15px;
+}
+#hichart-container > .highcharts-container {
+  width: 200px !important;
+  height: 400px !important;
+}

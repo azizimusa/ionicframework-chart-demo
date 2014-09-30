@@ -1,0 +1,30 @@
+<ion-view title="Line Chart">
+  <ion-nav-buttons side="left" ng-controller="popover">
+    <img src="img/rsz_logo.png" id="logo"></button>
+  </ion-nav-buttons>
+  <ion-nav-buttons side="right" ng-controller="popover">
+    <button ng-click="openPopover($event)" class="button button-icon icon ion-android-more" ontouchend="window.plugins.deviceFeedback.acoustic()"></button>
+  </ion-nav-buttons>
+  <div class="bar bar-subheader bar-stable">
+    <h5 ng-if="chartProvider == 'morris'" class="title">Example 1</h5>
+    <h5 ng-if="chartProvider == 'chartjs'" class="title">Example 2</h5>
+    <h5 ng-if="chartProvider == 'canvasjs'" class="title">Example 3</h5>
+  </div>
+  <ion-content class="padding">
+    <br /><br />
+    <morrisline ng-if="chartProvider == 'morris'">
+      <div id="line-example"></div>
+    </morrisline>
+
+    <chartjsline ng-if="chartProvider == 'chartjs'">
+      <div id="canvas-holder">
+           <canvas id="chart-area" />
+      </div>
+    </chartjsline>
+
+      <canvasjsline ng-if="chartProvider == 'canvasjs'">
+        <div id="chartContainer" style="height: 300px; width: 100%;">
+      </div>
+    </canvasjsline>
+  </ion-content>
+</ion-view>
